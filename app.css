@@ -1,0 +1,147 @@
+body {
+	background-color: purple;
+	margin: 0;
+}
+button {
+	cursor: pointer;
+}
+dialog {
+	padding: 10px;
+}
+fieldset {
+	margin-bottom: 1vh;
+	padding: 1vb;
+}
+
+#controls {
+	background-color: purple;
+	display: flex;
+	height: 3vh;
+	justify-content: space-between;
+	padding: 0 2.5vw;
+}
+#controls > button {
+	background-color: purple;
+	border: none;
+	color: lightskyblue;
+	font-size: 2.5vh;
+}
+
+#query {
+	border: none;
+	font-size: 4vh;
+	height: 4vh;
+	text-transform: uppercase;
+	width: calc(100% - 4px);
+}
+#query:focus {
+	outline: none;
+}
+
+#delete {
+	background: center no-repeat url(images/delete.svg);
+	border: none;
+	--height: calc(4vh + 2px);
+	height: var(--height);
+	padding: 0;
+	position: absolute;
+	right: 0;
+	width: calc(var(--height) + 0.5vw);
+}
+
+#words {
+	background-color: purple;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(7, 1fr);
+	height: calc(92vh - 2px); /* 100vh - 4vh - 3vh - 1vh - 2px */
+	padding: 0 0.5vw 1vh 0.5vw;
+}
+
+#words > button {
+	background: center 66% / 33% no-repeat white;
+	border: 1px solid;
+	border-radius: calc(100% / 12) / calc(100% / 7);
+	font-size: xxx-large;
+}
+#words > button::before {
+	content: attr(data-word);
+	display: block;
+	font-family: monospace;
+	font-size: 3vb;
+	position: relative;
+	top: calc(-100% / 3);
+}
+
+#vocab {
+	background-color: #FFF;
+}
+#vocab table {
+	border: 1px solid gray;
+	border-collapse: collapse;
+	font-size: 3vb;
+	/*height: calc(93vh - 2px);*/
+	width: 100%;
+}
+#vocab tr:first-of-type {
+	background-color: silver;
+}
+#vocab tr:not(:first-of-type) {
+	border-bottom: 1px solid;
+	cursor: pointer;
+}
+#vocab th {
+	border-bottom: 1px solid gray;
+}
+#vocab th:first-of-type {
+	width: 5vw;
+}
+#vocab th:last-of-type {
+	text-align: left;
+}
+#vocab td {
+	height: 5vh;
+}
+#vocab td[data-active="true"] {
+	background: url(images/checkmark.svg) center center no-repeat;
+}
+
+/*#menu_dialog label {
+	display: inline-block;
+	width: 95px;
+}*/
+#menu_dialog ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#menu_dialog input[type="radio"] {
+	appearance: none;
+	margin: 0;
+}
+#menu_dialog input[type="radio"] + label {
+	border-radius: 1vb;
+	outline: 1px solid;
+	padding: 0.5vb;
+}
+#menu_dialog input[type="radio"]:checked + label {
+	background-color: lightskyblue;
+}
+/*#menu_dialog li:not(:first-of-type) {
+	margin-top: 5px;
+}
+#menu_dialog li > * {
+	font-size: 16px;
+}*/
+
+#update_btn {
+	background-color: cadetblue;
+	border: none;
+	font-size: 3vh;
+	font-weight: 600;
+	padding: 2vh 0;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 100%;
+}

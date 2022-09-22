@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>TalkToo - Augmentative and Alternative Communication (AAC) app</title>
+		<meta charset="utf-8">
+		<meta rel="canonical" href="https://phyreman.github.io/TalkToo/">
+		<meta name="description" content="Augmentative and Alternative Communication (AAC) app">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" sizes="any" href="favicon.ico">
+		<link rel="icon" type="image/svg+xml" href="favicon.svg">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="manifest.json">
+		<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#2d89ef">
+		<meta name="msapplication-TileImage" content="mstile-144x144.png">
+		<meta name="msapplication-config" content="browserconfig.xml" />
+		<meta name="theme-color" content="#ffffff">
+		<link rel="stylesheet" href="app.css"></link>
+		<script defer src="app.js"></script>
+	</head>
+	<body>
+		<input id="query" type="text">
+		<button id="delete"></button>
+		<div id="controls">
+			<button id="vocab_btn">Vocab</button>
+			<button id="menu_btn" onclick="menu_dialog.showModal()">Menu</button>
+		</div>
+		<section id="words">
+			<button data-word="finished"></button>
+			<button data-word="mine"></button>
+			<button data-word="little"></button>
+			<button data-word="up"></button>
+			<button data-word="yes"></button>
+			<button data-word="good"></button>
+			<button data-word="some"></button>
+			<button data-word="no"></button>
+			<button data-word="down"></button>
+			<button data-word="out"></button>
+			<button data-word="off"></button>
+			<button data-word="bad"></button>
+			<button data-word="me"></button>
+			<button data-word="my"></button>
+			<button data-word="wear"></button>
+			<button data-word="am"></button>
+			<button data-word="please"></button>
+			<button data-word="that"></button>
+			<button data-word="and"></button>
+			<button data-word="in"></button>
+			<button data-word="what"></button>
+			<button data-word="a"></button>
+			<button data-word="+s"></button>
+			<button data-word="there"></button>
+			<button data-word="I"></button>
+			<button data-word="we"></button>
+			<button data-word="are"></button>
+			<button data-word="is"></button>
+			<button data-word="were"></button>
+			<button data-word="was"></button>
+			<button data-word="on"></button>
+			<button data-word="to"></button>
+			<button data-word="SPELL/NUM"></button>
+			<button data-word="an"></button>
+			<button data-word="the"></button>
+			<button data-word="end"></button>
+			<button data-word="you"></button>
+			<button data-word="they"></button>
+			<button data-word="new"></button>
+			<button data-word="play"></button>
+			<button data-word="like"></button>
+			<button data-word="work"></button>
+			<button data-word="have"></button>
+			<button data-word="feel"></button>
+			<button data-word="read"></button>
+			<button data-word="more"></button>
+			<button data-word="fast"></button>
+			<button data-word="stop"></button>
+			<button data-word="it"></button>
+			<button data-word="he"></button>
+			<button data-word="want"></button>
+			<button data-word="all"></button>
+			<button data-word="come"></button>
+			<button data-word="time"></button>
+			<button data-word="do"></button>
+			<button data-word="go"></button>
+			<button data-word="get"></button>
+			<button data-word="big"></button>
+			<button data-word="color"></button>
+			<button data-word="help"></button>
+			<button data-word="she"></button>
+			<button data-word="look"></button>
+			<button data-word="slow"></button>
+			<button data-word="hear"></button>
+			<button data-word="think"></button>
+			<button data-word="right"></button>
+			<button data-word="said"></button>
+			<button data-word="live"></button>
+			<button data-word="love"></button>
+			<button data-word="follow"></button>
+			<button data-word="ride"></button>
+			<button data-word="put"></button>
+			<button data-word="CLEAR"></button>
+			<button data-word="not"></button>
+			<button data-word="talk"></button>
+			<button data-word="sit"></button>
+			<button data-word="eat"></button>
+			<button data-word="find"></button>
+			<button data-word="make"></button>
+			<button data-word="need"></button>
+			<button data-word="drink"></button>
+			<button data-word="watch"></button>
+			<button data-word="turn"></button>
+			<button data-word="sleep"></button>
+		</section>
+		<section id="keyboard" hidden>
+			<div id="nums">
+				<button data-alt="!">1</button>
+				<button data-alt="@">2</button>
+				<button data-alt="#">3</button>
+				<button data-alt="$">4</button>
+				<button data-alt="%">5</button>
+				<button data-alt="^">6</button>
+				<button data-alt="&">7</button>
+				<button data-alt="*">8</button>
+				<button data-alt="(">9</button>
+				<button data-alt=")">0</button>
+				<button data-alt="_">-</button>
+				<button data-alt="+">=</button>
+			</div>
+		</section>
+		<section id="eat" hidden>
+			<button data-word="GO BACK"></button>
+			<button data-word="ASIAN"></button>
+			<button data-word="CONDIMENT"></button>
+			<button data-word="DAIRY"></button>
+			<button data-word="FRUIT"></button>
+			<button data-word="ITALIAN"></button>
+			<button data-word="MEALS"></button>
+			<button data-word="MEAT/SEA"></button>
+			<button data-word="MEXICAN"></button>
+			<button data-word="SNACK/DESSERT"></button>
+			<button data-word="VEGETABLE"></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button data-word="food"></button>
+			<button data-word="foods"></button>
+			<button data-word="hungrily"></button>
+			<button></button>
+			<button></button>
+			<button data-word="eat"></button>
+			<button data-word="eats"></button>
+			<button data-word="eating"></button>
+			<button data-word="ate"></button>
+			<button data-word="eaten"></button>
+			<button data-word="to eat"></button>
+			<button data-word="hungry"></button>
+			<button data-word="hungrier"></button>
+			<button data-word="hungriest"></button>
+			<button data-word="anywhere"></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button data-word="anyone"></button>
+			<button data-word="anyhow"></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button data-word="anymore"></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button data-word="grow"></button>
+			<button data-word="bite"></button>
+			<button data-word="anytime"></button>
+			<button data-word="chew"></button>
+			<button></button>
+			<button></button>
+			<button data-word="smell"></button>
+			<button></button>
+			<button data-word="anybody"></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button data-word="anyway"></button>
+			<button></button>
+			<button></button>
+			<button data-word="feed"></button>
+			<button></button>
+			<button data-word="anything"></button>
+			<button></button>
+			<button data-word="CLEAR"></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button data-word="taste"></button>
+			<button></button>
+		</section>
+		<section id="drink" hidden></section>
+		<section id="vocab" hidden>
+			<table>
+				<tr>
+					<th>Active</th>
+					<th>Name / Description</th>
+				</tr>
+				<tr>
+					<td data-active="true"></td>
+					<td>One-Touch - 84 of the core vocabulary words spoken at a single touch.</td>
+				</tr>
+				<tr>
+					<td data-active="false"></td>
+					<td>Transition - Introduces pressing sequences of buttons to speak a word or phrase. This provides access to a larger vocabulary list as well, allowing for more specific word choice and expression.</td>
+				</tr>
+				<tr>
+					<td data-active="false"></td>
+					<td>Complete - Provides full access to the entire available vocabulary. This includes access to prefixes such as -s, -er, -est, and more!</td>
+				</tr>
+				<tr>
+					<td data-active="false"></td>
+					<td>DEMO - An example of a custom vocabulary list for training with a specific set of words.</td>
+				</tr>
+			</table>
+		</section>
+		<dialog id="menu_dialog">
+			<form method="dialog">
+				<ul>
+					<li>
+						<fieldset>
+							<legend>Current Button Mode:</legend>
+							<input type="radio" id="onetouch_radio" name="mode" value="0" checked>
+							<label for="onetouch_radio">One-Touch</label>
+							<input type="radio" id="sequence_radio" name="mode" value="1">
+							<label for="sequence_radio">Sequenced</label>
+						</fieldset>
+					</li>
+				</ul>
+				<button id="submit" value="default">Save</button>
+				<button id="cancel" value="cancel">Cancel</button>
+			</form>
+		</dialog>
+		<button id="update_btn" hidden>A new version is available. Click here to update.</button>
+	</body>
+</html>
